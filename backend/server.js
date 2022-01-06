@@ -21,8 +21,14 @@ connection.once("open", () => {
 const exerciseRouter = require("./routes/exercise");
 const usersRouter = require("./routes/users");
 
-app.use("/exercises", exerciseRouter);
-app.use("/users", usersRouter);
+app.use("/api/exercises", exerciseRouter);
+app.use("/api/users", usersRouter);
+
+if (process.env.NODE_ENV === "production") {
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+  });
+}
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
