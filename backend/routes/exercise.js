@@ -41,12 +41,14 @@ router.route("/:id").delete((req, res) => {
 });
 
 router.route("/update/:id").post((req, res) => {
-  Exercise.findById(req.params.id)
+  //console.log("asdasda");
+  Exercise.findByIdAndUpdate(req.body.id, req.body)
     .then((exercise) => {
       exercise.username = req.body.username;
       exercise.description = req.body.desccription;
       exercise.duration = req.body.duration;
       exercise.date = req.body.date;
+      res.json(exercise);
     })
     .catch((err) => res.status(400).json("Error: " + err));
 });

@@ -23,7 +23,10 @@ connection.once("open", () => {
 
 const exerciseRouter = require("./routes/exercise");
 const usersRouter = require("./routes/users");
-
+app.use((req, res, next) => {
+  console.log(req);
+  next();
+});
 app.use("/api/exercises", exerciseRouter);
 app.use("/api/users", usersRouter);
 
