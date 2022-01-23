@@ -93,10 +93,10 @@ const EditExercise = (props) => {
   };
 
   return (
-    <div>
-      <h3>Edit Exercise</h3>
+    <div style={{ margin: 100 }}>
+      <h1>Edit Exercise</h1>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
+        <div className="form-group col-lg-4 m-2">
           <label>Username:</label>
           <select
             required
@@ -113,7 +113,7 @@ const EditExercise = (props) => {
             })}
           </select>
         </div>
-        <div className="form-group">
+        <div className="form-group col-lg-4 m-2">
           <label>Desctription : </label>
           <input
             type="text"
@@ -122,7 +122,7 @@ const EditExercise = (props) => {
             onChange={onChangeDescription}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group col-lg-4 m-2">
           <label>Duration(in mins) : </label>
           <input
             type="text"
@@ -131,7 +131,7 @@ const EditExercise = (props) => {
             onChange={onChangeDuration}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group col-lg-4 m-2">
           <label>Date : </label>
           <DatePicker
             className="form-control"

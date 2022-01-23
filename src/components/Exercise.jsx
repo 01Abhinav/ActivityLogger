@@ -15,17 +15,17 @@ class Exercise extends React.Component {
   render() {
     return (
       <tr>
-        <th>{this.state.username}</th>
-        <th>{this.state.description}</th>
-        <th>{this.state.duration}</th>
-        <th>{this.state.date}</th>
-        <th>
+        <td>{this.state.username}</td>
+        <td>{this.state.description}</td>
+        <td>{this.state.duration}</td>
+        <td>{this.state.date}</td>
+        <td>
           <Link to={"/edit/" + this.state.key}>Edit</Link> |{" "}
           <a href="#" onClick={() => this.props.deleteExercise(this.state.key)}>
             {" "}
             Delete
           </a>
-        </th>
+        </td>
       </tr>
     );
   }

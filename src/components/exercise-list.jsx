@@ -3,6 +3,13 @@ import axios from "axios";
 
 import Exercise from "./Exercise";
 
+const customScrollBar = {
+  position: "relative",
+  height: "300px",
+  overflow: "auto",
+  display: "block",
+};
+
 class ExerciseList extends Component {
   constructor(props) {
     super(props);
@@ -50,16 +57,16 @@ class ExerciseList extends Component {
 
   render() {
     return (
-      <div>
-        <h3> Logged Exercises</h3>
-        <table className="table">
-          <thead className="thead-light">
+      <div style={{ margin: 100 }}>
+        <h1> Logged Exercises</h1>
+        <table className="table" style={customScrollBar}>
+          <thead className="thead-dark">
             <tr>
-              <th>Username</th>
-              <th>Description</th>
-              <th>Duration( mins )</th>
-              <th>Date</th>
-              <th>Actions</th>
+              <th scope="col">Username</th>
+              <th scope="col">Description</th>
+              <th scope="col">Duration( mins )</th>
+              <th scope="col">Date</th>
+              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>{this.exerciseList()}</tbody>

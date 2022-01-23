@@ -34,11 +34,11 @@ class CreateUser extends Component {
   }
   render() {
     return (
-      <div>
-        <h3>Create New Exercise Log</h3>
+      <div style={{ margin: 100 }}>
+        <h1>Create User</h1>
         <form onSubmit={this.onSubmit}>
-          <div className="form-group">
-            <label>User name : </label>
+          <div className="form-group col-lg-4 m-2">
+            <label>Username : </label>
             <input
               type="text"
               className="form-control"

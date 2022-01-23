@@ -40,11 +40,11 @@ const DeleteUser = (props) => {
   };
 
   return (
-    <>
-      <h3>Delete User</h3>
+    <div style={{ margin: 100 }}>
+      <h1>Delete User</h1>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label>user:</label>
+        <div className="form-group col-lg-4 m-2">
+          <label>Username:</label>
           <select
             required
             className="form-control"
@@ -60,16 +60,16 @@ const DeleteUser = (props) => {
             })}
           </select>
 
-          <div className="form-group">
+          <div className="form-group ">
             <input
               type="submit"
               value="delete user"
-              className="btn btn-primary m-2"
+              className="btn btn-danger m-2"
             />
           </div>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

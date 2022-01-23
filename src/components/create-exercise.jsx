@@ -72,10 +72,10 @@ class CreateExercise extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Create New Exercise Log</h3>
+      <div style={{ margin: 100 }}>
+        <h1>Create New Exercise</h1>
         <form onSubmit={this.onSubmit}>
-          <div className="form-group">
+          <div className="form-group col-lg-4 m-2">
             <label>Username:</label>
             <select
               required
@@ -92,7 +92,7 @@ class CreateExercise extends Component {
               })}
             </select>
           </div>
-          <div className="form-group">
+          <div className="form-group col-lg-4 m-2">
             <label>Desctription : </label>
             <input
               type="text"
@@ -101,7 +101,7 @@ class CreateExercise extends Component {
               onChange={this.onChangeDescription}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-lg-4 m-2">
             <label>Duration(in mins) : </label>
             <input
               type="text"
@@ -110,7 +110,7 @@ class CreateExercise extends Component {
               onChange={this.onChangeDuration}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-lg-4 m-2">
             <label>Date : </label>
             <DatePicker
               className="form-control"
