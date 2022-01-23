@@ -10,14 +10,15 @@ class Navbar extends Component {
             <Link className="nav-item nav-link" to="/">
               Home
             </Link>
-            <Link className="nav-item nav-link" to="/edit/:id">
-              Edit Exercise
-            </Link>
+            <Link className="nav-item nav-link" to="/edit/:id"></Link>
             <Link className="nav-item nav-link" to="/users">
               Create User
             </Link>
             <Link className="nav-item nav-link" to="/create">
               Create Exercise
+            </Link>
+            <Link className="nav-item nav-link" to="/delete">
+              Delete User
             </Link>
           </div>
         </div>
