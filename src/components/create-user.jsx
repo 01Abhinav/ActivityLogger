@@ -31,6 +31,7 @@ class CreateUser extends Component {
 
     axios.post("/api/users/add", user).then((res) => console.log(res.data));
     console.log(user);
+    window.location = "/";
   }
   render() {
     return (

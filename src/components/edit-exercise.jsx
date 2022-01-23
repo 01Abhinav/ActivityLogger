@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
@@ -89,7 +89,7 @@ const EditExercise = (props) => {
       .post(`/api/exercises/update/${key}`, exercise)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
-    //window.location = "/";
+    window.location = "/";
   };
 
   return (
