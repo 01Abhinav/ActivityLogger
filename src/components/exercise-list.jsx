@@ -59,18 +59,21 @@ class ExerciseList extends Component {
     return (
       <div style={{ margin: 100 }}>
         <h1> Logged Exercises</h1>
-        <table className="table" style={customScrollBar}>
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col">Username</th>
-              <th scope="col">Description</th>
-              <th scope="col">Duration( mins )</th>
-              <th scope="col">Date</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>{this.exerciseList()}</tbody>
-        </table>
+        <div style={customScrollBar}>
+          <table className="table table-striped">
+            <thead className="thead-dark">
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Description</th>
+                <th scope="col">Duration( mins )</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>{this.exerciseList()}</tbody>
+          </table>
+        </div>
       </div>
     );
   }
